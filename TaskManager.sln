@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.TestBusinessLay
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.TestAPILayer", "TaskManager.TestAPILayer\TaskManager.TestAPILayer.csproj", "{0059767F-C0A7-47EA-BB54-BE9FC2CE9F04}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManager.PerformanceTest", "TaskManager.PerformanceTest\TaskManager.PerformanceTest.csproj", "{DE166AE0-C3D1-43E6-9B29-5859AA761EBC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{0059767F-C0A7-47EA-BB54-BE9FC2CE9F04}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0059767F-C0A7-47EA-BB54-BE9FC2CE9F04}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0059767F-C0A7-47EA-BB54-BE9FC2CE9F04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE166AE0-C3D1-43E6-9B29-5859AA761EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE166AE0-C3D1-43E6-9B29-5859AA761EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE166AE0-C3D1-43E6-9B29-5859AA761EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE166AE0-C3D1-43E6-9B29-5859AA761EBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

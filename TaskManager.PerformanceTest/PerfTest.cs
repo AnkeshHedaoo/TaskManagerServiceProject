@@ -5,6 +5,7 @@ using TaskManager.Entities;
 using System.Web.Http;
 using TaskManager.WebAPI.Controllers;
 
+
 namespace TaskManager.PerformanceTest
 {
     public class PerfTest
@@ -21,7 +22,7 @@ namespace TaskManager.PerformanceTest
         [PerfSetup]
         public void Setup(BenchmarkContext context)
         {
-            for (var cnt =0; cnt <100;cnt++)
+            for (var cnt = 0; cnt < 100; cnt++)
             {
                 tasks.Add(new Task()
                 {
@@ -37,25 +38,25 @@ namespace TaskManager.PerformanceTest
             }
         }
 
-        [PerfBenchmark(NumberOfIterations =5,RunMode =RunMode.Throughput,TestMode =TestMode.Test,SkipWarmups =true)]
-        [ElapsedTimeAssertion(MaxTimeMilliseconds =10000,MinTimeMilliseconds =1000)]
+        [PerfBenchmark(NumberOfIterations = 5, RunMode = RunMode.Throughput, TestMode = TestMode.Test, SkipWarmups = true)]
+        [ElapsedTimeAssertion(MaxTimeMilliseconds = 10000, MinTimeMilliseconds = 1000)]
 
         public void AddTask_Throughput_IterationMode(BenchmarkContext context)
         {
-            for(var i=0; i < tasks.Count; i++)
+            for (var i = 0; i < tasks.Count; i++)
             {
                 IHttpActionResult result = controller.POST(tasks[i]);
             }
         }
 
-        [PerfBenchmark(NumberOfIterations =1,RunMode =RunMode.Throughput,TestMode =TestMode.Test,SkipWarmups =true)]
-        [ElapsedTimeAssertion(MaxTimeMilliseconds =10000,MinTimeMilliseconds =1000)]
+        [PerfBenchmark(NumberOfIterations = 1, RunMode = RunMode.Throughput, TestMode = TestMode.Test, SkipWarmups = true)]
+        [ElapsedTimeAssertion(MaxTimeMilliseconds = 10000, MinTimeMilliseconds = 1000)]
 
-        public void GetTaskById_Throughput_IterationMode(BenchmarkContext context)
+        public void GetTask_Throughput_IterationMode(BenchmarkContext context)
         {
-            for(var i=0; i< AcceptableMinAddThroughput;i++)
+            for (var i = 0; i < AcceptableMinAddThroughput; i++)
             {
-                IHttpActionResult result = controller.Get(1);
+                IHttpActionResult result = controller.Get();
             }
         }
 
