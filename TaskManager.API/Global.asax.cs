@@ -7,7 +7,7 @@ using System.Web.Routing;
 using TaskManager.DataLib;
 
 
-namespace TaskManager.API
+namespace TaskManager.WebAPI
 {
     public class WebApiApplication : System.Web.HttpApplication
     {

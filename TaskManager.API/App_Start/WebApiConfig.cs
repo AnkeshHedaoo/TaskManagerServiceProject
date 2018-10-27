@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
-namespace TaskManager.API
+namespace TaskManager.WebAPI
 {
     public static class WebApiConfig
     {

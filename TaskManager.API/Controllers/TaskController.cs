@@ -10,11 +10,14 @@ using TaskManager.BusinessLib;
 using System.Web.Http.Description;
 using System.Data.Entity.Infrastructure;
 
-namespace TaskManager.API.Controllers
+namespace TaskManager.WebAPI.Controllers
 {
     public class TaskController : ApiController
     {
         TaskBL taskobj = new TaskBL();
+
+        public new HttpRequestMessage Request { get; set; }
+        public HttpConfiguration Cofiguration { get; set; }
 
         [Route ("GetAllTask")]
         public IHttpActionResult Get()
